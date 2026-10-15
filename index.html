@@ -2,293 +2,47 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="House of Kids: play, restaurante, librería y juguetería en Cartago.">
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>House of Kids</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&family=Nunito:wght@400;600;800&display=swap">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House of Kids · Muy pronto</title>
+<meta name="description" content="House of Kids: play, restaurante, librería y juguetería en Cartago. Nuestra página está en construcción.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&family=Nunito:wght@400;700;800&display=swap">
 <style>
-/* Layout: página larga de una columna con bandas alternas; cada sección abre con una palabra en letras multicolor como el logo */
-:root{
-  --bg:#FDE7EA; --paper:#FFF6F7; --ink:#3B2A44; --soft:#7A6380; --line:#F2C6CF;
-  --pink:#E2569A; --orange:#F07A2B; --green:#2F8C63; --blue:#2D63A8; --yellow:#E9B824; --sky:#8FB7E8;
-  --display:"Sniglet","Baloo 2","Trebuchet MS",system-ui,sans-serif;
-  --body:"Nunito","Segoe UI",system-ui,sans-serif;
-}
-/* Paletas pastel para mostrar al cliente */
-:root[data-palette="crema"]{--bg:#FFF8EC; --paper:#FFFDF8; --line:#F1DFC4; --soft:#7D6A5E}
-:root[data-palette="menta"]{--bg:#E6F6EF; --paper:#F6FCF9; --line:#BFE3D2; --soft:#5E7268}
-:root[data-palette="lila"]{--bg:#EFEAFB; --paper:#FAF8FE; --line:#D4CAF0; --soft:#6E6385}
-:root[data-palette="cielo"]{--bg:#E7F1FC; --paper:#F7FBFF; --line:#C3DAF2; --soft:#5F6E80}
-:root[data-palette="noche"]{
-  --bg:#231A2A; --paper:#2E2336; --ink:#F8E9EE; --soft:#C8B2CE; --line:#4A3953;
-  --pink:#F27BB4; --orange:#F79A55; --green:#5CC296; --blue:#7FA8E6; --yellow:#F3CE5A; --sky:#9EC3F0; color-scheme:dark}
+:root{--bg:#FDE7EA;--paper:#FFF6F7;--ink:#3B2A44;--soft:#7A6380;--line:#F2C6CF;--pink:#E2569A;--orange:#F07A2B;--green:#2F8C63;--blue:#2D63A8;--yellow:#E9B824;--sky:#8FB7E8;color-scheme:light}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.02rem;line-height:1.6}
-a{color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
-h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
-.rainbow span:nth-child(6n+1){color:var(--orange)} .rainbow span:nth-child(6n+2){color:var(--yellow)}
-.rainbow span:nth-child(6n+3){color:var(--pink)} .rainbow span:nth-child(6n+4){color:var(--green)}
-.rainbow span:nth-child(6n+5){color:var(--sky)} .rainbow span:nth-child(6n+6){color:var(--blue)}
-.rainbow span{text-shadow:2px 2px 0 var(--line)}
-.eyebrow{font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink)}
-
-/* nav */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;gap:16px;padding-block:10px}
-.nav img{width:48px;height:48px;border-radius:50%;object-fit:cover}
-.nav strong{font-family:var(--display);font-size:1.15rem}
-.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;flex-wrap:wrap}
-.nav ul a{text-decoration:none;font-weight:700;padding:6px 10px;border-radius:999px;font-size:.92rem}
-.nav ul a:hover,.nav ul a:focus-visible{background:var(--paper);outline:none}
-@media (max-width:760px){.nav ul{display:none}}
-
-/* hero */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:48px 56px}
-.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800}
-.hero p.lead{font-size:1.15rem;color:var(--soft);max-width:34ch;margin:18px 0 26px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
-.tags span{background:var(--paper);border:2px solid var(--line);border-radius:999px;padding:4px 14px;font-weight:700;font-size:.9rem}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;text-decoration:none;padding:12px 22px;border-radius:999px;border:2px solid var(--ink);background:var(--paper);color:var(--ink)}
-.btn.main{background:var(--green);border-color:var(--green);color:#fff}
-.btn:hover{transform:translateY(-2px)} .btn{transition:transform .15s}
-.photo-stack{position:relative;min-width:0}
-.photo-stack img{border-radius:28px;width:100%;display:block;aspect-ratio:4/3.4;object-fit:cover}
-.sticker{position:absolute;left:-14px;bottom:-18px;background:var(--yellow);color:#3B2A44;font-family:var(--display);font-weight:800;padding:14px 18px;border-radius:20px;transform:rotate(-4deg);max-width:240px;line-height:1.2;box-shadow:4px 4px 0 var(--ink)}
-@media (max-width:820px){.hero{grid-template-columns:1fr;padding-block:28px 48px}.sticker{left:8px}}
-
-section{padding-block:64px}
-.band{background:var(--paper);border-block:2px dashed var(--line)}
-.sec-head{display:flex;flex-direction:column;gap:6px;margin-bottom:30px;max-width:640px}
-.sec-head h2{font-size:clamp(2rem,4.5vw,3rem);font-weight:800}
-.sec-head p{color:var(--soft);margin:6px 0 0}
-
-/* play */
-.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.zone{min-width:0}
-.zone img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:24px;display:block}
-.zone h3{font-size:1.35rem;margin:14px 0 4px}
-.zone p{margin:0;color:var(--soft)}
-.zone:nth-child(1) img{border:5px solid var(--orange)} .zone:nth-child(2) img{border:5px solid var(--sky)} .zone:nth-child(3) img{border:5px solid var(--green)}
-@media (max-width:820px){.zones{grid-template-columns:1fr}.zone img{aspect-ratio:4/3}}
-
-/* menu */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.tab{font:800 .95rem var(--body);padding:8px 18px;border-radius:999px;border:2px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
-.tab[aria-selected="true"]{background:var(--pink);border-color:var(--pink);color:#fff}
-.tab:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-.menu-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 40px}
-.menu-list li{display:flex;align-items:baseline;gap:10px;padding:12px 0;border-bottom:1px dotted var(--line)}
-.menu-list .n{font-weight:800}
-.menu-list .d{display:block;font-size:.9rem;color:var(--soft);font-weight:400}
-.menu-list .p{margin-left:auto;font-family:var(--display);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--green)}
-@media (max-width:700px){.menu-list{grid-template-columns:1fr}}
-.note{margin-top:18px;font-size:.88rem;color:var(--soft);background:var(--bg);border-radius:12px;padding:10px 14px;display:inline-block}
-
-/* tienda */
-.shop{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.prod{background:var(--paper);border:2px solid var(--line);border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
-.prod .art{aspect-ratio:1/1;border-radius:16px;display:grid;place-items:center;font-family:var(--display);font-size:2.6rem;color:#fff}
-.prod .cat{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
-.prod h3{font-size:1.1rem}
-.prod .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;gap:8px}
-.prod .price{font-family:var(--display);font-variant-numeric:tabular-nums}
-.prod button{font:800 .82rem var(--body);border:0;border-radius:999px;padding:7px 12px;background:var(--line);color:var(--soft);cursor:not-allowed}
-@media (max-width:900px){.shop{grid-template-columns:1fr 1fr}}
-.soon{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:26px;padding:18px 22px;border-radius:20px;border:2px dashed var(--blue);align-items:center}
-.soon strong{font-family:var(--display);font-size:1.2rem;color:var(--blue)}
-.soon span{color:var(--soft)}
-
-/* fiestas */
-.party{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
-.party ul{padding-left:1.1em;margin:14px 0 24px}
-.party li{margin-bottom:6px}
-.party img{width:100%;border-radius:28px;aspect-ratio:4/3;object-fit:cover;display:block}
-@media (max-width:820px){.party{grid-template-columns:1fr}}
-
-/* visita */
-.visit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.vcard{background:var(--paper);border-radius:22px;padding:22px;min-width:0}
-.vcard h3{font-size:1.2rem;margin-bottom:8px}
-.vcard p{margin:0;color:var(--soft)}
-.vcard .big{font-family:var(--display);font-size:1.4rem;color:var(--ink);user-select:all}
-@media (max-width:820px){.visit{grid-template-columns:1fr}}
-footer{padding-block:34px;text-align:center;color:var(--soft);font-size:.9rem}
-.picker{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--paper);border:2px solid var(--line);border-radius:999px;padding:8px 12px;display:flex;align-items:center;gap:8px;box-shadow:0 6px 20px rgba(59,42,68,.15)}
-.picker span{font-weight:800;font-size:.8rem;color:var(--soft)}
-.picker button{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);cursor:pointer;padding:0}
-.picker button[aria-pressed="true"]{border-color:var(--ink);box-shadow:0 0 0 2px var(--paper),0 0 0 4px var(--ink)}
-.picker button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Nunito","Segoe UI",system-ui,sans-serif;line-height:1.6;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:32px 20px}
+main{max-width:620px;width:100%;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px}
+.logo{width:150px;height:150px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 6px var(--paper)}
+.eyebrow{font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin:0}
+h1{font-family:"Sniglet","Trebuchet MS",system-ui,sans-serif;font-weight:800;font-size:clamp(2.4rem,9vw,4rem);line-height:1.05;margin:0}
+h1 span{text-shadow:2px 2px 0 var(--line)}
+h1 span:nth-child(6n+1){color:var(--orange)}h1 span:nth-child(6n+2){color:var(--yellow)}h1 span:nth-child(6n+3){color:var(--pink)}
+h1 span:nth-child(6n+4){color:var(--green)}h1 span:nth-child(6n+5){color:var(--sky)}h1 span:nth-child(6n+6){color:var(--blue)}
+p.lead{font-size:1.1rem;color:var(--soft);margin:0;max-width:44ch}
+.bar{width:min(320px,100%);height:14px;border-radius:999px;background:var(--paper);border:2px solid var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:70%;border-radius:999px;background:repeating-linear-gradient(45deg,var(--yellow) 0 12px,var(--orange) 12px 24px);animation:move 1.2s linear infinite;background-size:34px 34px}
+@keyframes move{to{background-position:34px 0}}
+@media (prefers-reduced-motion:reduce){.bar i{animation:none}}
+.soon{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.soon span{background:var(--paper);border:2px solid var(--line);border-radius:999px;padding:4px 14px;font-weight:700;font-size:.9rem}
+.btn{display:inline-block;font-weight:800;text-decoration:none;padding:12px 24px;border-radius:999px;background:var(--green);color:#fff}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.info{font-size:.95rem;color:var(--soft);margin:0}
+.info a{color:var(--ink);font-weight:800}
 </style>
 </head>
 <body>
-
-<header>
-  <div class="wrap nav">
-    <img src="logo.jpg" alt="Logo de House of Kids">
-    <strong>House of Kids</strong>
-    <ul>
-      <li><a href="#play">Play</a></li>
-      <li><a href="#menu">Menú</a></li>
-      <li><a href="#tienda">Tienda</a></li>
-      <li><a href="#fiestas">Fiestas</a></li>
-      <li><a href="#visita">Visítanos</a></li>
-    </ul>
-  </div>
-</header>
-
 <main>
-  <div class="wrap hero">
-    <div>
-      <p class="eyebrow">Play · Restaurante · Librería · Juguetería</p>
-      <h1 class="rainbow"><span>Jugar</span> <span>de</span> <span>verdad,</span> <span>comer</span> <span>rico,</span> <span>leer</span> <span>juntos.</span></h1>
-      <p class="lead">El mejor recuerdo de un niño nunca será una pantalla. En House of Kids los chicos excavan, trepan y juegan en la arena mientras ustedes disfrutan un café o un almuerzo.</p>
-      <div class="tags"><span>Arenero con excavadoras</span><span>Barco pirata</span><span>Zona suave</span><span>Café y almuerzos</span></div>
-      <div class="btns">
-        <a class="btn main" href="https://wa.me/50688373863" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
-        <a class="btn" href="#menu">Ver el menú</a>
-      </div>
-    </div>
-    <div class="photo-stack">
-      <img src="arena.jpg" alt="Niño jugando con camiones y animalitos en el arenero">
-      <div class="sticker">¿Sin planes para este finde? Vení a jugar.</div>
-    </div>
-  </div>
-
-  <section id="play" class="band">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Área de juego</span>
-        <h2 class="rainbow"><span>P</span><span>l</span><span>a</span><span>y</span></h2>
-        <p>Espacios pensados para que cada edad juegue a su ritmo, con juego libre y sin pantallas.</p>
-      </div>
-      <div class="zones">
-        <article class="zone">
-          <img src="excavadoras.jpg" alt="Niños usando excavadoras de juguete sobre la arena">
-          <h3>Arenero y excavadoras</h3>
-          <p>Arena blanca, excavadoras para montarse, volquetas y animalitos para construir mundos enteros.</p>
-        </article>
-        <article class="zone">
-          <img src="nina.jpg" alt="Niña jugando con regadera en el arenero">
-          <h3>Barco pirata y tobogán</h3>
-          <p>Un barco para trepar y deslizarse, con baldes, palas y moldes para la arena.</p>
-        </article>
-        <article class="zone">
-          <img src="suave.jpg" alt="Niños en la zona de figuras suaves">
-          <h3>Zona suave</h3>
-          <p>Figuras de espuma, bloques magnéticos y piso acolchado para los más pequeños.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="menu">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Restaurante</span>
-        <h2 class="rainbow"><span>M</span><span>e</span><span>n</span><span>ú</span></h2>
-        <p>Almuerzos, café, postres, sándwiches y pizza, para comer tranquilos mientras los chicos juegan.</p>
-      </div>
-      <div class="tabs" role="tablist" aria-label="Categorías del menú" id="tabs"></div>
-      <ul class="menu-list" id="menuList"></ul>
-      <p class="note">Platillos y precios de ejemplo para la propuesta; se reemplazan con el menú real de House of Kids.</p>
-    </div>
-  </section>
-
-  <section id="tienda" class="band">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Librería y juguetería</span>
-        <h2 class="rainbow"><span>T</span><span>i</span><span>e</span><span>n</span><span>d</span><span>a</span></h2>
-        <p>Juguetes, libros y útiles escolares. Muy pronto vas a poder comprarlos en línea y recogerlos en el local o recibirlos en casa.</p>
-      </div>
-      <div class="shop">
-        <article class="prod"><div class="art" style="background:var(--orange)">Aa</div><span class="cat">Librería</span><h3>Cuentos ilustrados</h3><div class="row"><span class="price">₡ —</span><button disabled>Pronto</button></div></article>
-        <article class="prod"><div class="art" style="background:var(--green)">◐</div><span class="cat">Juguetería</span><h3>Juguetes de arena</h3><div class="row"><span class="price">₡ —</span><button disabled>Pronto</button></div></article>
-        <article class="prod"><div class="art" style="background:var(--blue)">▦</div><span class="cat">Juguetería</span><h3>Bloques magnéticos</h3><div class="row"><span class="price">₡ —</span><button disabled>Pronto</button></div></article>
-        <article class="prod"><div class="art" style="background:var(--pink)">✎</div><span class="cat">Librería</span><h3>Útiles escolares</h3><div class="row"><span class="price">₡ —</span><button disabled>Pronto</button></div></article>
-      </div>
-      <div class="soon">
-        <strong>Fase 2: tienda en línea</strong>
-        <span>Catálogo con fotos y precios · carrito · pago con SINPE Móvil o tarjeta · retiro en el local o envío</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="fiestas">
-    <div class="wrap party">
-      <div>
-        <span class="eyebrow">Cumpleaños</span>
-        <h2 class="rainbow" style="font-size:clamp(2rem,4.5vw,3rem)"><span>F</span><span>i</span><span>e</span><span>s</span><span>t</span><span>a</span><span>s</span></h2>
-        <p>Reservá el segundo piso para el cumpleaños y celebrá con el área de juego, la comida del restaurante y espacio para la familia.</p>
-        <ul>
-          <li>Segundo piso exclusivo para tu fiesta</li>
-          <li>Comida y pastel del restaurante</li>
-          <li>El primer piso sigue abierto al público con normalidad</li>
-        </ul>
-        <a class="btn main" href="https://wa.me/50688373863?text=Hola%2C%20quiero%20reservar%20una%20fiesta%20en%20House%20of%20Kids" target="_blank" rel="noopener">Consultar fechas</a>
-      </div>
-      <img src="excavadoras.jpg" alt="Segundo piso con arenero y excavadoras">
-    </div>
-  </section>
-
-  <section id="visita" class="band">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Te esperamos</span>
-        <h2 class="rainbow"><span>V</span><span>i</span><span>s</span><span>í</span><span>t</span><span>a</span><span>n</span><span>o</span><span>s</span></h2>
-      </div>
-      <div class="visit">
-        <div class="vcard"><h3>Dirección</h3><p>Costado noreste de la Basílica de los Ángeles, Cartago.</p></div>
-        <div class="vcard"><h3>WhatsApp</h3><p class="big">8837-3863</p></div>
-        <div class="vcard"><h3>Redes</h3><p class="big">@houseofkidscr</p><p><a href="https://www.instagram.com/houseofkidscr" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61584361350311" target="_blank" rel="noopener">Facebook</a></p></div>
-      </div>
-    </div>
-  </section>
+  <img class="logo" src="logo.jpg" alt="Logo de House of Kids">
+  <p class="eyebrow">Play · Restaurante · Librería · Juguetería</p>
+  <h1><span>¡Muy</span> <span>pronto</span> <span>nueva</span> <span>página!</span></h1>
+  <p class="lead">Estamos construyendo nuestro sitio web. Muy pronto vas a poder ver nuestro menú, el área de juego, reservar fiestas y comprar juguetes y libros en línea.</p>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="soon"><span>Menú</span><span>Área de juego</span><span>Fiestas</span><span>Tienda en línea</span></div>
+  <a class="btn" href="https://wa.me/50688373863" target="_blank" rel="noopener">Escribinos por WhatsApp: 8837-3863</a>
+  <p class="info">Mientras tanto seguinos en <a href="https://www.instagram.com/houseofkidscr" target="_blank" rel="noopener">Instagram</a> y <a href="https://www.facebook.com/profile.php?id=61584361350311" target="_blank" rel="noopener">Facebook</a> · @houseofkidscr<br>Costado noreste de la Basílica de los Ángeles, Cartago</p>
 </main>
-
-<footer>House of Kids · Play y Restaurante · Librería y Juguetería · Cartago, Costa Rica</footer>
-
-<div class="picker" role="group" aria-label="Color de fondo">
-  <span>Fondo</span>
-  <button id="pal-rosa" data-p="rosa" style="background:#FDE7EA" aria-label="Rosa pastel" title="Rosa pastel"></button>
-  <button id="pal-crema" data-p="crema" style="background:#FFF8EC" aria-label="Crema" title="Crema"></button>
-  <button id="pal-menta" data-p="menta" style="background:#E6F6EF" aria-label="Menta" title="Menta"></button>
-  <button id="pal-lila" data-p="lila" style="background:#EFEAFB" aria-label="Lila" title="Lila"></button>
-  <button id="pal-cielo" data-p="cielo" style="background:#E7F1FC" aria-label="Celeste" title="Celeste"></button>
-  <button id="pal-noche" data-p="noche" style="background:#231A2A" aria-label="Noche (oscuro)" title="Noche (oscuro)"></button>
-</div>
-<script>
-(function(){
-  const root=document.documentElement,btns=document.querySelectorAll('.picker button');
-  function setPal(p){
-    if(p==='rosa')root.removeAttribute('data-palette');else root.setAttribute('data-palette',p);
-    root.style.colorScheme=p==='noche'?'dark':'light';
-    btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.p===p));
-    try{localStorage.setItem('hok-pal',p)}catch(e){}
-  }
-  btns.forEach(b=>b.onclick=()=>setPal(b.dataset.p));
-  let saved='rosa';try{saved=localStorage.getItem('hok-pal')||'rosa'}catch(e){}
-  setPal(saved);
-})();
-const MENU={
-  "Almuerzos":[["Casado del día","Arroz, frijoles, ensalada, maduro y proteína","₡ —"],["Menú infantil","Porción pequeña con fresco natural","₡ —"],["Arroz con pollo","Con papas tostadas","₡ —"]],
-  "Pizza":[["Pizza de queso","Personal o mediana","₡ —"],["Pizza de jamón","Personal o mediana","₡ —"],["Pizza suprema","Personal o mediana","₡ —"]],
-  "Sándwiches":[["Sándwich de pollo","Con papas","₡ —"],["Sándwich jamón y queso","Pan tostado","₡ —"]],
-  "Café":[["Café chorreado","Café de Costa Rica","₡ —"],["Capuchino","",""+"₡ —"],["Chocolate caliente","Ideal para los chicos","₡ —"]],
-  "Postres":[["Queque del día","Porción","₡ —"],["Brownie","Con helado","₡ —"]]
-};
-const tabs=document.getElementById('tabs'),list=document.getElementById('menuList');
-function show(cat){
-  [...tabs.children].forEach(b=>b.setAttribute('aria-selected',b.dataset.cat===cat));
-  list.innerHTML=MENU[cat].map(([n,d,p])=>`<li><span><span class="n">${n}</span>${d?`<span class="d">${d}</span>`:''}</span><span class="p">${p}</span></li>`).join('');
-}
-Object.keys(MENU).forEach((c,i)=>{const b=document.createElement('button');b.className='tab';b.role='tab';b.id='tab-'+i;b.dataset.cat=c;b.textContent=c;b.onclick=()=>show(c);tabs.appendChild(b)});
-show("Almuerzos");
-</script>
-
 </body>
 </html>
